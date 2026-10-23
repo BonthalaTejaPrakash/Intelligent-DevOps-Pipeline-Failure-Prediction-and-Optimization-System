@@ -1,0 +1,306 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    /* Theme 1: Aurora Slate & Cyan (Default - High Contrast, Deep, Vibrant & Ultra-Clear) */
+    --bg-canvas: #080d16;
+    --bg-surface-lowest: #05080f;
+    --bg-surface-low: #0d1524;
+    --bg-surface-container: #131e33;
+    --bg-surface-container-high: #1a2a46;
+    --bg-surface-container-highest: #24395e;
+    --bg-surface-bright: #314d7c;
+
+    --border-subtle: #1e2c45;
+    --border-default: #2b3e61;
+    --border-highlight: #38bdf8;
+
+    --text-on-surface: #f8fafc;
+    --text-on-surface-variant: #cbd5e1;
+    --text-outline: #94a3b8;
+    --text-outline-variant: #475569;
+
+    --primary: #38bdf8;
+    --on-primary: #082f49;
+    --primary-container: #0284c7;
+    --on-primary-container: #ffffff;
+
+    --secondary: #2dd4bf;
+    --on-secondary: #042f2e;
+    --secondary-container: #0f766e;
+    --on-secondary-container: #ccfbf1;
+
+    --tertiary: #c084fc;
+    --on-tertiary: #3b0764;
+    --tertiary-container: #9333ea;
+    --on-tertiary-container: #faf5ff;
+
+    --error: #fb7185;
+    --on-error: #4c0519;
+    --error-container: #9f1239;
+    --on-error-container: #ffe4e6;
+  }
+
+  /* Theme 2: Nordic Studio (Clean High-Contrast Light Mode) */
+  html.theme-nordic {
+    --bg-canvas: #f1f5f9;
+    --bg-surface-lowest: #ffffff;
+    --bg-surface-low: #ffffff;
+    --bg-surface-container: #f8fafc;
+    --bg-surface-container-high: #e2e8f0;
+    --bg-surface-container-highest: #cbd5e1;
+    --bg-surface-bright: #94a3b8;
+
+    --border-subtle: #e2e8f0;
+    --border-default: #cbd5e1;
+    --border-highlight: #0284c7;
+
+    --text-on-surface: #0f172a;
+    --text-on-surface-variant: #334155;
+    --text-outline: #64748b;
+    --text-outline-variant: #cbd5e1;
+
+    --primary: #0284c7;
+    --on-primary: #ffffff;
+    --primary-container: #0284c7;
+    --on-primary-container: #ffffff;
+
+    --secondary: #0d9488;
+    --on-secondary: #ffffff;
+    --secondary-container: #ccfbf1;
+    --on-secondary-container: #115e59;
+
+    --tertiary: #7c3aed;
+    --on-tertiary: #ffffff;
+    --tertiary-container: #ede9fe;
+    --on-tertiary-container: #5b21b6;
+
+    --error: #e11d48;
+    --on-error: #ffffff;
+    --error-container: #ffe4e6;
+    --on-error-container: #9f1239;
+  }
+
+  /* Theme 3: Cyber Amber Command (Tactical Telemetry) */
+  html.theme-cyber {
+    --bg-canvas: #090a0d;
+    --bg-surface-lowest: #050608;
+    --bg-surface-low: #101217;
+    --bg-surface-container: #161922;
+    --bg-surface-container-high: #202430;
+    --bg-surface-container-highest: #2c3243;
+    --bg-surface-bright: #3b435a;
+
+    --border-subtle: #242938;
+    --border-default: #343b4f;
+    --border-highlight: #f59e0b;
+
+    --text-on-surface: #f9fafb;
+    --text-on-surface-variant: #d1d5db;
+    --text-outline: #9ca3af;
+    --text-outline-variant: #4b5563;
+
+    --primary: #f59e0b;
+    --on-primary: #451a03;
+    --primary-container: #d97706;
+    --on-primary-container: #ffffff;
+
+    --secondary: #10b981;
+    --on-secondary: #022c22;
+    --secondary-container: #047857;
+    --on-secondary-container: #d1fae5;
+
+    --tertiary: #a855f7;
+    --on-tertiary: #3b0764;
+    --tertiary-container: #7e22ce;
+    --on-tertiary-container: #f3e8ff;
+
+    --error: #f43f5e;
+    --on-error: #4c0519;
+    --error-container: #9f1239;
+    --on-error-container: #ffe4e6;
+  }
+  
+  html, body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-canvas);
+    color: var(--text-on-surface);
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  body {
+    overscroll-behavior: none;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--bg-surface-lowest);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--bg-surface-container-high);
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--bg-surface-container-highest);
+  }
+}
+
+/* Typography Utility Classes */
+.font-data-metric {
+  font-family: var(--font-mono);
+  font-size: 28px;
+  line-height: 32px;
+  letter-spacing: -0.03em;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.font-label-sm {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  line-height: 14px;
+  font-weight: 500;
+}
+
+.font-label-md {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: -0.005em;
+  font-weight: 600;
+}
+
+.font-label-lg {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.01em;
+  font-weight: 600;
+}
+
+.font-headline-xl {
+  font-family: var(--font-sans);
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: -0.025em;
+  font-weight: 700;
+}
+
+.font-headline-lg {
+  font-family: var(--font-sans);
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+
+.font-headline-md {
+  font-family: var(--font-sans);
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: -0.01em;
+  font-weight: 600;
+}
+
+.font-headline-sm {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+}
+
+.font-body-lg {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+.font-body-md {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.font-body-sm {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+}
+
+/* Material Symbols sizing helper */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 20;
+  vertical-align: middle;
+}
+
+.material-symbols-fill {
+  font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 20;
+}
+
+/* Theme Adaptive Semantic Surfaces */
+.bg-background { background-color: var(--bg-canvas); }
+.bg-surface-container-lowest { background-color: var(--bg-surface-lowest); }
+.bg-surface-container-low { background-color: var(--bg-surface-low); }
+.bg-surface-container { background-color: var(--bg-surface-container); }
+.bg-surface-container-high { background-color: var(--bg-surface-container-high); }
+.bg-surface-container-highest { background-color: var(--bg-surface-container-highest); }
+.bg-surface-bright { background-color: var(--bg-surface-bright); }
+
+/* Theme Adaptive Primary & Accents */
+.bg-primary { background-color: var(--primary); }
+.text-primary { color: var(--primary); }
+.bg-primary-container { background-color: var(--primary-container); }
+.text-on-primary-container { color: var(--on-primary-container); }
+.text-on-primary { color: var(--on-primary); }
+
+.bg-secondary { background-color: var(--secondary); }
+.text-secondary { color: var(--secondary); }
+.bg-secondary-container { background-color: var(--secondary-container); }
+.text-on-secondary-container { color: var(--on-secondary-container); }
+
+.bg-tertiary { background-color: var(--tertiary); }
+.text-tertiary { color: var(--tertiary); }
+.bg-tertiary-container { background-color: var(--tertiary-container); }
+.text-on-tertiary-container { color: var(--on-tertiary-container); }
+
+.bg-error { background-color: var(--error); }
+.text-error { color: var(--error); }
+.bg-error-container { background-color: var(--error-container); }
+.text-on-error-container { color: var(--on-error-container); }
+
+/* Theme Adaptive Text */
+.text-on-surface { color: var(--text-on-surface); }
+.text-on-surface-variant { color: var(--text-on-surface-variant); }
+.text-outline { color: var(--text-outline); }
+.text-outline-variant { color: var(--text-outline-variant); }
+
+/* Theme Adaptive Borders */
+.border-outline-variant { border-color: var(--border-subtle); }
+.border-outline { border-color: var(--border-default); }
+
+/* Crisp Card & Section Styling */
+.card-clean {
+  background-color: var(--bg-surface-low);
+  border: 1px solid var(--border-subtle);
+  border-radius: 0.75rem;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.card-clean:hover {
+  border-color: var(--border-default);
+}

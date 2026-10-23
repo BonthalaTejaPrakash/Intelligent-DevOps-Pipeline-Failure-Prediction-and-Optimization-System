@@ -1,0 +1,6 @@
+{
+  "name": "PipeGuard AI",
+  "description": "Pipeline Intelligence & Reliability Command with Pre-Execution Risk Engine, DAG Topology Explorer, Failure Diagnosis, and 3D CI Mesh.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,264 @@
+---
+name: Obsidian Telemetry
+colors:
+  surface: '#0e131e'
+  surface-dim: '#0e131e'
+  surface-bright: '#343946'
+  surface-container-lowest: '#090e19'
+  surface-container-low: '#161b27'
+  surface-container: '#1b1f2b'
+  surface-container-high: '#252a36'
+  surface-container-highest: '#303541'
+  on-surface: '#dee2f2'
+  on-surface-variant: '#c2c6d6'
+  inverse-surface: '#dee2f2'
+  inverse-on-surface: '#2b303d'
+  outline: '#8c909f'
+  outline-variant: '#424754'
+  surface-tint: '#adc6ff'
+  primary: '#adc6ff'
+  on-primary: '#002e6a'
+  primary-container: '#4d8eff'
+  on-primary-container: '#00285d'
+  inverse-primary: '#005ac2'
+  secondary: '#a4c9ff'
+  on-secondary: '#00315d'
+  secondary-container: '#0267b8'
+  on-secondary-container: '#d6e5ff'
+  tertiary: '#ddb7ff'
+  on-tertiary: '#490080'
+  tertiary-container: '#b76dff'
+  on-tertiary-container: '#400071'
+  error: '#ffb4ab'
+  on-error: '#690005'
+  error-container: '#93000a'
+  on-error-container: '#ffdad6'
+  primary-fixed: '#d8e2ff'
+  primary-fixed-dim: '#adc6ff'
+  on-primary-fixed: '#001a42'
+  on-primary-fixed-variant: '#004395'
+  secondary-fixed: '#d4e3ff'
+  secondary-fixed-dim: '#a4c9ff'
+  on-secondary-fixed: '#001c39'
+  on-secondary-fixed-variant: '#004883'
+  tertiary-fixed: '#f0dbff'
+  tertiary-fixed-dim: '#ddb7ff'
+  on-tertiary-fixed: '#2c0051'
+  on-tertiary-fixed-variant: '#6900b3'
+  background: '#0e131e'
+  on-background: '#dee2f2'
+  surface-variant: '#303541'
+typography:
+  headline-xl:
+    fontFamily: Inter
+    fontSize: 32px
+    fontWeight: '600'
+    lineHeight: 40px
+    letterSpacing: -0.02em
+  headline-xl-mobile:
+    fontFamily: Inter
+    fontSize: 24px
+    fontWeight: '600'
+    lineHeight: 32px
+    letterSpacing: -0.01em
+  headline-lg:
+    fontFamily: Inter
+    fontSize: 24px
+    fontWeight: '600'
+    lineHeight: 32px
+    letterSpacing: -0.015em
+  headline-md:
+    fontFamily: Inter
+    fontSize: 18px
+    fontWeight: '600'
+    lineHeight: 24px
+    letterSpacing: -0.01em
+  headline-sm:
+    fontFamily: Inter
+    fontSize: 15px
+    fontWeight: '500'
+    lineHeight: 20px
+  body-lg:
+    fontFamily: Inter
+    fontSize: 16px
+    fontWeight: '400'
+    lineHeight: 24px
+  body-md:
+    fontFamily: Inter
+    fontSize: 14px
+    fontWeight: '400'
+    lineHeight: 20px
+  body-sm:
+    fontFamily: Inter
+    fontSize: 12px
+    fontWeight: '400'
+    lineHeight: 16px
+  label-lg:
+    fontFamily: JetBrains Mono
+    fontSize: 14px
+    fontWeight: '500'
+    lineHeight: 20px
+    letterSpacing: -0.01em
+  label-md:
+    fontFamily: JetBrains Mono
+    fontSize: 12px
+    fontWeight: '500'
+    lineHeight: 16px
+    letterSpacing: -0.005em
+  label-sm:
+    fontFamily: JetBrains Mono
+    fontSize: 11px
+    fontWeight: '400'
+    lineHeight: 14px
+  data-metric:
+    fontFamily: JetBrains Mono
+    fontSize: 28px
+    fontWeight: '600'
+    lineHeight: 32px
+    letterSpacing: -0.03em
+rounded:
+  sm: 0.125rem
+  DEFAULT: 0.25rem
+  md: 0.375rem
+  lg: 0.5rem
+  xl: 0.75rem
+  full: 9999px
+spacing:
+  gutter: 1rem
+  gutter-mobile: 0.75rem
+  margin: 1.5rem
+  margin-mobile: 1rem
+  space-xs: 0.25rem
+  space-sm: 0.5rem
+  space-md: 1rem
+  space-lg: 1.5rem
+  space-xl: 2rem
+---
+
+## Brand & Style
+
+This design system establishes a high-density, analytical console for engineering leaders, SREs, and DevOps practitioners. The visual language balances precision instrumentation with high-legibility developer ergonomic standards, drawing operational depth from modern observabilities like Grafana, Linear, and Datadog.
+
+### Personality & Tone
+- **Forensic Precision:** Sharp, uncluttered surfaces where every pixel conveys operational state without decorative excess.
+- **Calm Resilience:** Deep midnight backdrops mitigate ocular strain during extended incident response while allowing predictive signals to emerge crisply.
+- **Tactical Authority:** Monospaced data anchors, razor-thin borders, and contextual luminescence inspire trust in automated failure interception and risk prediction algorithms.
+
+### Aesthetic Paradigm
+The interface blends **Dark Glass Minimalism** with **Technical Instrumentation**:
+- Tiered midnight obsidian surfaces defined by crisp, 1px structure lines.
+- Focused glow gradients and semantic indicator rings reserved exclusively for system health states, telemetry shifts, and pipeline anomalies.
+- Strict visual hierarchy designed to support massive cognitive throughput across complex Directed Acyclic Graph (DAG) topologies, live streaming log consoles, and real-time inference scores.
+
+## Colors
+
+The palette employs deep atmospheric blue-blacks as light sinks, allowing semantic status colors to cut through immediately upon visual scanning. Functional tokens must never deviate from their status assignments to prevent diagnostic misinterpretation.
+
+### Core Canvas & Elevation Tokens
+- **Canvas Base (`#080D18`):** Deepest workspace plane; foundation for overall viewport background and outer gutter margins.
+- **Sidebar & Inset Surface (`#0C1423`):** Recessed functional chrome, navigation drawers, and collapsed telemetry trays.
+- **Card & Panel Layer (`#111D30`):** Default working plane for metrics, logs, run summaries, and interactive pipeline blocks.
+- **Elevated Interactive Surface (`#16243A`):** Modal sheets, popovers, active stage nodes, tooltips, and hover states.
+- **Subtle Structural Border (`#26364D`):** Universal 1px structural delimitation across containers, dividers, and table rows.
+
+### Brand & Interactive Accents
+- **Primary Electric Blue (`#3B82F6`):** Focused actions, primary buttons, highlighted active states, and AI predictive trajectories.
+- **Secondary Cyan Glow (`#60A5FA`):** Dynamic graph connecting lines, hover rings, active filters, and sub-metric trends.
+- **High-Risk Violet (`#A855F7`):** Predictive failure thresholding, ML anomaly flags, and intelligent optimization suggestions.
+
+### Semantic Telemetry States
+- **Success / Healthy (`#22C55E`):** Stable pipeline completions, zero flakiness, sub-threshold build durations.
+- **Warning / At-Risk (`#F59E0B`):** Cache degradation, test flakiness warning, resource saturation trending high.
+- **Critical / Failed (`#F87171`):** Pipeline hard breaks, deterministic failures, critical blockage points.
+
+### Typography & Content Shades
+- **Text Primary (`#F1F5F9`):** Primary readings, active node labels, card headlines, and metric integers.
+- **Text Secondary (`#94A3B8`):** Table headers, secondary descriptions, tooltips, and parameter tags.
+- **Text Muted (`#64748B`):** Commit SHAs, timestamps, stage run IDs, and inactive visual indicators.
+
+## Typography
+
+Typography orchestrates the interface through strict functional bifurcations:
+- **Inter** handles narrative structure, descriptive analytics, contextual UI, settings labels, and page hierarchy.
+- **JetBrains Mono** governs all precision diagnostic data: Commit SHAs, branch names, build timestamps, runtime durations, confidence intervals, terminal output, and DAG pipeline stage titles.
+
+### Hierarchy & Treatment Rules
+- **Numerical Tabular Alignment:** Monospaced figures must be used in all data tables, telemetry counters, and probability gauges to avoid layout shifts during real-time streaming updates.
+- **Data Metric Utility:** Large metric counters (`data-metric`) pair with `label-sm` capitalized uppercase descriptors for instant at-a-glance telemetry recognition.
+- **Contrast Ratios:** Ensure secondary text never drops below 4.5:1 against card panels; muted tokens are restricted to non-critical diagnostic metadata and timestamps.
+
+## Layout & Spacing
+
+The layout is built around an uncompromising 8px harmonic grid system optimized for information-dense operations. Layout composition follows a flexible, multi-column workspace model designed to support persistent side navigation, collapsible contextual drawers, and wide canvas visualization panels.
+
+### Layout Mechanics
+- **Desktop (1440px+):** 12-column layout with fixed 64px icon bar or 240px collateral navigation; center canvas flexes to accommodate horizontal DAG stage trees or split-screen log/metric views. Gutters are locked to `1rem` (16px) with an outer margin of `1.5rem` (24px).
+- **Tablet / Laptop (1024px - 1439px):** Persistent sidebar auto-collapses to an icon rail (64px); grid adjusts to 8 columns. DAG graphs activate horizontal inertia panning.
+- **Mobile (< 1024px):** Single-column layout stacked sequentially. Side navigation transitions to an off-canvas drawer. Outer canvas margin shrinks to `1rem` (16px), and internal gutters scale to `0.75rem` (12px).
+
+### Spacing Token Usage
+- **`space-xs` (4px):** Micro-spacing: Tag internal padding, icon-to-label inline gaps, and status pill badges.
+- **`space-sm` (8px):** Component interior padding: Form input vertical bounds, table cell compact heights, button internal gaps.
+- **`space-md` (16px):** Module structural padding: Card inner padding, list item separations, header-to-action margins.
+- **`space-lg` (24px):** Widget boundaries: Gaps between disparate analytical widgets, dashboard section partitions.
+- **`space-xl` (32px):** View boundaries: Page level headers, global settings blocks, primary section splits.
+
+## Elevation & Depth
+
+Visual depth is achieved through tiered surface luminance and subtle architectural outlines rather than diffuse, muddy drop shadows. This preserves high-contrast clarity across dark surfaces.
+
+### Surface Tiers
+- **Tier 0 (Viewport Ground - `#080D18`):** Deep ambient canvas. Sits furthest back.
+- **Tier 1 (Surface Canvas - `#0C1423`):** Primary structural frames, left rail bars, pinned data trays.
+- **Tier 2 (Base Panel - `#111D30`):** Default elevated card state, log windows, pipeline node tracks. Framed by a 1px solid stroke in `#26364D`.
+- **Tier 3 (Floating / Active - `#16243A`):** Dynamic overlays, popovers, hover tooltips, and active dropdown options.
+
+### Outlines & Border Luminescence
+- **Default Structural Outline:** Universal `1px solid #26364D`. Never use drop shadows for inactive containers.
+- **Active State:** Focus or selection activates a primary electric border (`#3B82F6`) paired with an interior glow: `box-shadow: 0 0 0 1px #3B82F6, 0 0 12px -2px rgba(59, 130, 246, 0.35)`.
+- **Critical / Anomaly State:** Pipeline failures or high risk trigger an urgent, focused halo: `box-shadow: 0 0 0 1px #F87171, 0 0 14px -2px rgba(248, 113, 113, 0.4)`.
+- **Predictive ML State:** AI optimization insights project an ambient violet boundary: `box-shadow: 0 0 0 1px #A855F7, 0 0 12px -2px rgba(168, 85, 247, 0.3)`.
+
+## Shapes
+
+The interface embraces a structured, engineered aesthetic using **Soft (`1`)** rounding. Curves are restrained to prevent a consumer-app feel, reinforcing analytical precision and structural alignment.
+
+### Radius Assignments
+- **Core Elements (`0.25rem` / 4px):** Checkboxes, small inline tags, code-snippet tokens, table item selectors, and mini status badges.
+- **Components (`rounded-lg` / `0.5rem` / 8px):** Buttons, text inputs, metric cards, stage nodes within the pipeline DAG, and alert banners.
+- **Overlays & Modals (`rounded-xl` / `0.75rem` / 12px):** Flyout inspection sheets, context menus, and central failure diagnostic modals.
+- **Status Indicators (Full Pill):** Exclusively reserved for execution status pills (`Running`, `Passed`, `Failed`) to make them stand out against squared modular grids.
+
+## Components
+
+### Buttons
+- **Primary:** Solid `#3B82F6` background, `#F1F5F9` text, 8px radius, `font-family: Inter`, weight 500. Subtle hover lightening to `#60A5FA`. Active ring: 2px offset glow.
+- **Secondary / Ghost:** Transparent background with 1px `#26364D` border, text `#F1F5F9`. Hover transitions background to `#16243A` and border to `#3B82F6`.
+- **Destructive:** Border `#F87171` with 10% translucent red fill (`rgba(248, 113, 113, 0.1)`), text `#F87171`. Hover escalates to solid `#F87171` with `#080D18` text.
+
+### Inputs & Search Bars
+- Background: `#0C1423`. Border: 1px `#26364D`. Radius: 8px. Height: 36px (compact) or 40px (standard).
+- Text: Primary `#F1F5F9` with placeholder text in `#64748B`.
+- Focus State: Border transitions to `#3B82F6` with subtle directional focus ring (`0 0 0 1px #3B82F6`). Monospaced text input active when searching via SHA or Regex.
+
+### Cards & Analytical Panels
+- Background: `#111D30`. Border: 1px `#26364D`. Radius: 8px. Internal padding: `space-md` (16px).
+- Panel Headers: Include uppercase `label-sm` mono tags indicating refresh intervals or data streams, paired with `headline-sm` titles.
+
+### Status Indicators & Badges
+- Structured as compact rounded pills (100px radius). Height: 22px. Padding: 0 8px. Font: `label-sm`.
+- **Passed:** Background `rgba(34, 197, 94, 0.12)`, text `#22C55E`, border `1px solid rgba(34, 197, 94, 0.3)`.
+- **Predictive Warning:** Background `rgba(245, 158, 11, 0.12)`, text `#F59E0B`, border `1px solid rgba(245, 158, 11, 0.3)`.
+- **Hard Failure:** Background `rgba(248, 113, 113, 0.12)`, text `#F87171`, border `1px solid rgba(248, 113, 113, 0.3)`. Includes pulsing 6px dot.
+
+### Checkboxes & Toggle Controls
+- Size: 16x16px. Background `#0C1423` with 1px `#26364D` border. Radius: 4px.
+- Checked: Fill `#3B82F6` with white SVG checkmark.
+
+### Domain-Specific Components
+- **Pipeline DAG Stage Nodes:** 
+  Rectangular cards (`#111D30`), 8px radius, bound by 1px `#26364D` borders. Top border features a 2px semantic accent strip reflecting status (`#22C55E`, `#F87171`, `#A855F7`). Connecting edges render in `#26364D` with animated pulse particles traversing active pipelines.
+- **Risk Prediction Gauge:**
+  Segmented progress rings or horizontal multi-tier bars depicting failure risk percentage (`data-metric`), transitioning dynamically from Green (<20%) to Violet/Amber (21-65%) to Red (66%+).
+- **Log Streaming Console:**
+  Background `#080D18` inset within cards. Typography: `label-sm` JetBrains Mono, line height 1.6. Alternating row indicators, hover highlight `#16243A`, and color-coded log levels (INFO: `#60A5FA`, WARN: `#F59E0B`, ERR: `#F87171`).

@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: 'class', theme: { extend: { 'colors': { 'primary-fixed-dim': '#adc6ff', 'primary-container': '#4d8eff', 'on-secondary': '#00315d', 'surface-bright': '#343946', 'on-secondary-fixed': '#001c39', 'outline': '#8c909f', 'on-primary-fixed-variant': '#004395', 'secondary': '#a4c9ff', 'surface-container-high': '#252a36', 'outline-variant': '#424754', 'error': '#ffb4ab', 'tertiary-container': '#b76dff', 'surface-tint': '#adc6ff', 'surface-container-low': '#161b27', 'on-primary-container': '#00285d', 'secondary-fixed-dim': '#a4c9ff', 'surface-container-highest': '#303541', 'error-container': '#93000a', 'surface-container-lowest': '#090e19', 'inverse-surface': '#dee2f2', 'secondary-container': '#0267b8', 'on-secondary-container': '#d6e5ff', 'tertiary-fixed': '#f0dbff', 'background': '#0e131e', 'on-primary-fixed': '#001a42', 'on-tertiary-fixed': '#2c0051', 'tertiary-fixed-dim': '#ddb7ff', 'on-surface': '#dee2f2', 'on-error': '#690005', 'on-background': '#dee2f2', 'inverse-primary': '#005ac2', 'on-secondary-fixed-variant': '#004883', 'inverse-on-surface': '#2b303d', 'on-tertiary-container': '#400071', 'on-surface-variant': '#c2c6d6', 'secondary-fixed': '#d4e3ff', 'surface': '#0e131e', 'primary-fixed': '#d8e2ff', 'on-error-container': '#ffdad6', 'surface-container': '#1b1f2b', 'surface-variant': '#303541', 'surface-dim': '#0e131e', 'on-tertiary': '#490080', 'tertiary': '#ddb7ff', 'on-primary': '#002e6a', 'on-tertiary-fixed-variant': '#6900b3', 'primary': '#adc6ff' }, 'borderRadius': { 'DEFAULT': '0.125rem', 'lg': '0.25rem', 'xl': '0.5rem', 'full': '0.75rem' }, 'spacing': { 'margin': '1.5rem', 'margin-mobile': '1rem', 'space-md': '1rem', 'space-xl': '2rem', 'space-xs': '0.25rem', 'gutter-mobile': '0.75rem', 'gutter': '1rem', 'space-sm': '0.5rem', 'space-lg': '1.5rem' }, 'fontFamily': { 'data-metric': ['JetBrains Mono'], 'label-sm': ['JetBrains Mono'], 'label-lg': ['JetBrains Mono'], 'headline-lg': ['Inter'], 'headline-xl-mobile': ['Inter'], 'headline-xl': ['Inter'], 'headline-md': ['Inter'], 'body-sm': ['Inter'], 'body-md': ['Inter'], 'label-md': ['JetBrains Mono'], 'headline-sm': ['Inter'], 'body-lg': ['Inter'] }, 'fontSize': { 'data-metric': ['28px', { 'lineHeight': '32px', 'letterSpacing': '-0.03em', 'fontWeight': '600' }], 'label-sm': ['11px', { 'lineHeight': '14px', 'fontWeight': '400' }], 'label-lg': ['14px', { 'lineHeight': '20px', 'letterSpacing': '-0.01em', 'fontWeight': '500' }], 'headline-lg': ['24px', { 'lineHeight': '32px', 'letterSpacing': '-0.015em', 'fontWeight': '600' }], 'headline-xl-mobile': ['24px', { 'lineHeight': '32px', 'letterSpacing': '-0.01em', 'fontWeight': '600' }], 'headline-xl': ['32px', { 'lineHeight': '40px', 'letterSpacing': '-0.02em', 'fontWeight': '600' }], 'headline-md': ['18px', { 'lineHeight': '24px', 'letterSpacing': '-0.01em', 'fontWeight': '600' }], 'body-sm': ['12px', { 'lineHeight': '16px', 'fontWeight': '400' }], 'body-md': ['14px', { 'lineHeight': '20px', 'fontWeight': '400' }], 'label-md': ['12px', { 'lineHeight': '16px', 'letterSpacing': '-0.005em', 'fontWeight': '500' }], 'headline-sm': ['15px', { 'lineHeight': '20px', 'fontWeight': '500' }], 'body-lg': ['16px', { 'lineHeight': '24px', 'fontWeight': '400' }] } } } };</script></head><body class="bg-background text-on-surface font-body-md text-body-md antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen"><header class="fixed top-0 left-0 right-0 z-40 bg-surface-container-lowest/90 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.25)]"><div class="h-14 w-full px-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md shrink-0"><div class="flex items-center gap-space-sm"><img alt="PipeGuard AI Logo" class="w-7 h-7 rounded-lg object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1XfgPaviWiZA0Cb7aUF8hfcLP-sV-_kUb7F1pCkt6r7AzOiXd1MGz5QPX0FvZdOopz1MRTon6PvSbW6INgq8gaLKIqKAqUoU9zQgfkldjDpibWfkGoj-wOYVSNXuc32I9M4OhtsvboPz4Y1QynfpRRQEtFzgnPbwAtwq6gcNYD512f_cRTpmqzm-ZCCcM-ZBLZh03pbBLPIVjBIgMYeaO5Z_eXaq3VbyT_oWm4qviIftHbM8rrblvDozG8"/><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface font-semibold">PipeGuard AI</span><span class="font-label-sm text-label-sm bg-surface-container-high text-primary px-space-xs py-0.5 rounded">v2.4-prod</span></div></div><div class="h-4 w-[1px] bg-outline-variant/40 hidden sm:block"></div><button class="hidden sm:flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-[16px] text-primary">cloud_done</span><span class="font-label-sm text-label-sm truncate max-w-[180px]">acme-cloud-platform / production</span><span class="material-symbols-outlined text-[16px]">expand_more</span></button></div><div class="flex-1 max-w-2xl hidden md:flex items-center gap-space-sm"><div class="relative flex-1"><span class="material-symbols-outlined absolute left-2.5 top-2 text-[18px] text-outline">search</span><input class="w-full bg-surface-container-low text-on-surface placeholder:text-outline font-label-sm text-label-sm rounded pl-8 pr-3 py-1.5 focus:outline-none focus:bg-surface-container transition-all" placeholder="Search pipelines, run IDs, models, commits... [Cmd + K]" type="text"/></div><div class="flex items-center gap-space-xs px-2 py-1 rounded bg-surface-container-low shrink-0"><span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span><span class="font-label-sm text-label-sm text-on-surface-variant">LIVE CI: GitHub Actions (3 repos)</span></div><div class="flex items-center gap-space-xs px-2 py-1 rounded bg-surface-container-high shrink-0"><span class="font-label-sm text-label-sm text-secondary">DEMO DATA ACTIVE</span><span class="w-2 h-2 rounded-full bg-secondary"></span></div></div><div class="flex items-center gap-space-sm shrink-0"><div class="hidden xl:flex items-center gap-space-xs px-2 py-1 rounded bg-surface-container-low"><span class="material-symbols-outlined text-[16px] text-emerald-400">check_circle</span><span class="font-label-sm text-label-sm text-on-surface-variant">Worker: 99.98%</span></div><button class="relative p-1.5 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-error"></span></button><button class="hidden lg:flex items-center gap-1.5 bg-primary-container text-on-primary-container px-space-sm py-1.5 rounded font-headline-sm text-headline-sm hover:opacity-90 transition-opacity"><span class="material-symbols-outlined text-[18px]">play_arrow</span><span>Trigger Run</span></button><div class="flex items-center gap-space-xs pl-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1XfgPaviWiZA0Cb7aUF8hfcLP-sV-_kUb7F1pCkt6r7AzOiXd1MGz5QPX0FvZdOopz1MRTon6PvSbW6INgq8gaLKIqKAqUoU9zQgfkldjDpibWfkGoj-wOYVSNXuc32I9M4OhtsvboPz4Y1QynfpRRQEtFzgnPbwAtwq6gcNYD512f_cRTpmqzm-ZCCcM-ZBLZh03pbBLPIVjBIgMYeaO5Z_eXaq3VbyT_oWm4qviIftHbM8rrblvDozG8"/><div class="hidden 2xl:flex flex-col text-left"><span class="font-headline-sm text-headline-sm leading-none text-on-surface">Alex Rivera</span><span class="font-label-sm text-label-sm text-outline">Staff SRE / Owner</span></div></div></div></div></header><aside class="fixed left-0 top-14 bottom-0 w-64 bg-surface-container-lowest z-30 flex flex-col justify-between overflow-y-auto"><div class="p-space-sm flex flex-col gap-space-sm"><div class="px-2 py-1"><span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Workspace</span></div><nav class="flex flex-col gap-0.5" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded"><a class="flex items-center gap-2.5 px-2.5 py-1.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-headline-sm text-headline-sm" data-path="overview" href="#"><span class="material-symbols-outlined text-[18px]">dashboard</span><span>Overview</span></a><a aria-current="page" class="flex items-center gap-2.5 px-2.5 py-1.5 transition-colors bg-primary-container text-on-primary-container font-semibold rounded" data-path="risk-prediction" href="#"><span class="material-symbols-outlined text-[18px]">security</span><span>Risk Prediction</span></a><a class="flex items-center gap-2.5 px-2.5 py-1.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-headline-sm text-headline-sm" data-path="pipeline-runs" href="#"><span class="material-symbols-outlined text-[18px]">alt_route</span><span>Pipeline Runs</span></a><a class="flex items-center gap-2.5 px-2.5 py-1.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-headline-sm text-headline-sm" data-path="repositories" href="#"><span class="material-symbols-outlined text-[18px]">source</span><span>Repositories</span></a><a class="flex items-center gap-2.5 px-2.5 py-1.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-headline-sm text-headline-sm" data-path="pipeline-explorer" href="#"><span class="material-symbols-outlined text-[18px]">hub</span><span>Pipeline Explorer</span></a></nav><div class="px-2 pt-space-xs py-1"><span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Intelligence</span></div><nav class="flex flex-col gap-0.5" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded"><a class="flex items-center gap-2.5 px-2.5 py-1.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-headline-sm text-headline-sm" data-path="failure-diagnosis" href="#"><span class="material-symbols-outlined text-[18px]">healing</span><span>Failure Diagnosis</span></a><a class="flex items-center gap-2.5 px-2.5 py-1.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-headline-sm text-headline-sm" data-path="optimization-center" href="#"><span class="material-symbols-outlined text-[18px]">bolt</span><span>Optimization Center</span></a><a class="flex items-center gap-2.5 px-2.5 py-1.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-headline-sm text-headline-sm" data-path="analytics" href="#"><span class="material-symbols-outlined text-[18px]">bar_chart</span><span>Analytics</span></a><a class="flex items-center gap-2.5 px-2.5 py-1.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-headline-sm text-headline-sm" data-path="model-evaluation" href="#"><span class="material-symbols-outlined text-[18px]">psychology</span><span>Model Evaluation</span></a></nav><div class="px-2 pt-space-xs py-1"><span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">System</span></div><nav class="flex flex-col gap-0.5" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded"><a class="flex items-center gap-2.5 px-2.5 py-1.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-headline-sm text-headline-sm" data-path="integrations" href="#"><span class="material-symbols-outlined text-[18px]">extension</span><span>Integrations</span></a><a class="flex items-center gap-2.5 px-2.5 py-1.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-headline-sm text-headline-sm" data-path="notifications" href="#"><span class="material-symbols-outlined text-[18px]">notifications_active</span><span>Notifications</span></a><a class="flex items-center gap-2.5 px-2.5 py-1.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-headline-sm text-headline-sm" data-path="audit-log" href="#"><span class="material-symbols-outlined text-[18px]">article</span><span>Audit Log</span></a><a class="flex items-center gap-2.5 px-2.5 py-1.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-headline-sm text-headline-sm" data-path="settings" href="#"><span class="material-symbols-outlined text-[18px]">settings</span><span>Settings</span></a></nav></div><div class="p-space-sm bg-surface-container-low/60 flex flex-col gap-space-sm"><div class="bg-surface-container-lowest p-2 rounded flex flex-col gap-1"><div class="flex justify-between items-center text-outline font-label-sm text-label-sm"><span>Telemetry</span><span class="text-primary font-semibold">Active</span></div><div class="font-label-sm text-label-sm text-on-surface-variant flex justify-between"><span>CPU: 18%</span><span>RAM: 4.2GB</span></div><div class="font-label-sm text-label-sm text-on-surface-variant"><span>Queue: 2 jobs</span></div></div><div class="flex items-center justify-between text-outline px-1"><a class="font-label-sm text-label-sm hover:text-on-surface flex items-center gap-1 transition-colors" href="#"><span class="material-symbols-outlined text-[16px]">description</span>Docs</a><button class="flex items-center gap-1 p-1 rounded hover:bg-surface-container-high hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[16px]">dark_mode</span></button></div></div></aside><div class="pl-64"><main class="pt-14 w-full px-gutter min-h-screen bg-background"><div class="flex flex-col w-full">
+<!-- Top Command Strip -->
+<section class="flex flex-col xl:flex-row xl:items-end justify-between gap-space-md pb-space-lg">
+<div class="flex flex-col gap-space-xs max-w-3xl">
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="font-label-sm text-label-sm bg-surface-container-high text-primary px-space-xs py-0.5 rounded flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">psychology</span>
+          Model: XGBoost Classifier v2.4-calibrated
+        </span>
+<span class="font-label-sm text-label-sm text-outline">|</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Last Trained: Today 04:00 UTC</span>
+<span class="font-label-sm text-label-sm text-outline">|</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Baseline: Logistic Regression v1.2</span>
+<span class="bg-error-container text-error font-label-sm text-label-sm px-space-xs py-0.5 rounded flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-error animate-pulse"></span>
+          DEMO FIXTURES ACTIVE • Ground-Truth Verified
+        </span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface font-semibold tracking-tight">
+        Pre-Execution Risk Prediction Engine
+      </h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+        Inference engine trained on chronological commit features, dependency churn, historical workflow patterns, and test stability to intercept continuous integration failure before computational resources are provisioned.
+      </p>
+</div>
+<!-- Active Target Selector Bar -->
+<div class="bg-surface-container-low rounded-xl p-space-sm flex flex-col sm:flex-row items-stretch sm:items-center gap-space-sm shadow-md">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Inspecting Execution Unit</span>
+<div class="relative mt-0.5">
+<button class="flex items-center justify-between gap-space-md bg-surface-container-high px-space-sm py-1.5 rounded text-left text-on-surface font-headline-sm text-headline-sm hover:bg-surface-bright transition-colors w-full sm:w-[380px]" id="runSelectBtn">
+<div class="flex items-center gap-space-xs truncate">
+<span class="material-symbols-outlined text-primary text-[18px]">terminal</span>
+<span class="truncate">Run #4192 — acme/api-gateway (PR #142)</span>
+</div>
+<span class="material-symbols-outlined text-outline text-[18px]">unfold_more</span>
+</button>
+</div>
+</div>
+<div class="flex items-center gap-space-sm pt-2 sm:pt-0">
+<button class="flex items-center justify-center gap-1.5 bg-primary text-on-primary px-space-md py-2 rounded-lg font-headline-sm text-headline-sm hover:opacity-90 transition-opacity whitespace-nowrap shadow-sm" id="reInferenceBtn">
+<span class="material-symbols-outlined text-[18px]">sync</span>
+<span>Re-Evaluate Matrix</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Pinned Metadata Bar -->
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-space-xs p-space-sm bg-surface-container rounded-lg mb-space-lg text-on-surface-variant">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase">Branch / Target</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">feat/payment-tokenization → main</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase">Commit SHA</span>
+<span class="font-label-md text-label-md text-primary font-mono truncate">7a8f19cd</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase">Committer</span>
+<span class="font-label-md text-label-md text-on-surface truncate">Sarah Kim (Staff Backend)</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase">Event Trigger</span>
+<span class="font-label-md text-label-md text-secondary-fixed truncate">pull_request.opened</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase">Elapsed Since Ingest</span>
+<span class="font-label-md text-label-md text-on-surface truncate">10 mins ago</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase">Interception Status</span>
+<span class="font-label-sm text-label-sm text-error font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+        DISPATCH HELD (High Risk)
+      </span>
+</div>
+</div>
+<!-- Primary Intelligence Canvas: Bento Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md items-start">
+<!-- LEFT COLUMN: Main Risk Gauge & Deep Confidence Telemetry -->
+<div class="lg:col-span-5 flex flex-col gap-space-md">
+<!-- Elevated Dark Risk Panel -->
+<div class="relative bg-surface-container p-space-lg rounded-xl shadow-xl overflow-hidden flex flex-col justify-between">
+<!-- Ambient radial glow behind the gauge -->
+<div class="absolute -top-12 -left-12 w-64 h-64 bg-error-container/30 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute -bottom-8 -right-8 w-48 h-48 bg-tertiary-container/20 rounded-full blur-2xl pointer-events-none"></div>
+<div class="relative z-10 flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-error text-[20px]">warning</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Pre-Flight Failure Probability</span>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container-lowest px-2 py-0.5 rounded text-on-surface-variant font-mono">XGB-Inf-0.988</span>
+</div>
+<!-- Risk Gauge Centerpiece -->
+<div class="relative z-10 my-space-lg flex flex-col items-center justify-center">
+<div class="relative w-56 h-56 flex items-center justify-center">
+<!-- Inline SVG Circular Gauge Meter -->
+<svg class="w-full h-full -rotate-90 transform" viewbox="0 0 160 160">
+<!-- Background Ring Track -->
+<circle class="text-surface-container-highest" cx="80" cy="80" fill="none" r="68" stroke="currentColor" stroke-dasharray="427" stroke-dashoffset="0" stroke-linecap="round" stroke-width="12"></circle>
+<!-- Safe Segment Ambient Track -->
+<circle class="text-surface-bright opacity-40" cx="80" cy="80" fill="none" r="68" stroke="currentColor" stroke-dasharray="427" stroke-dashoffset="120" stroke-linecap="round" stroke-width="12"></circle>
+<!-- Critical Progress Stroke (84% of 427 = ~358 stroke) -->
+<circle class="text-error transition-all duration-1000 ease-out" cx="80" cy="80" fill="none" id="riskMeterCircle" r="68" stroke="currentColor" stroke-dasharray="427" stroke-dashoffset="68" stroke-linecap="round" stroke-width="12"></circle>
+</svg>
+<!-- Center Metric Hub -->
+<div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+<span class="font-data-metric text-data-metric text-error font-bold tracking-tight drop-shadow-[0_0_12px_rgba(255,180,171,0.5)]" id="riskScoreVal">
+                84%
+              </span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline mt-0.5">Failure Likelihood</span>
+<div class="mt-2 flex items-center gap-1 bg-surface-container-lowest/80 px-2.5 py-0.5 rounded-full">
+<span class="w-2 h-2 rounded-full bg-error animate-ping"></span>
+<span class="font-label-sm text-label-sm text-error font-medium">CRITICAL RISK</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-center gap-space-lg mt-space-sm text-center">
+<div>
+<span class="font-label-sm text-label-sm text-outline block">Confidence Interval</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">95% CI: [79% – 88%]</span>
+</div>
+<div class="w-px h-6 bg-surface-container-highest"></div>
+<div>
+<span class="font-label-sm text-label-sm text-outline block">Model Uncertainty</span>
+<span class="font-label-md text-label-md text-primary font-semibold">Low (σ=0.06)</span>
+</div>
+</div>
+</div>
+<!-- Actionable Directive Banner -->
+<div class="relative z-10 bg-surface-container-lowest p-space-md rounded-lg flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-error">
+<span class="material-symbols-outlined text-[18px]">flip_camera_ios</span>
+<span class="font-headline-sm text-headline-sm font-semibold">Primary Recommendation</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Advise pre-flight dependency dry-run and targeted test execution before full matrix spawn. Automated hold engaged to prevent cascading runner saturation.
+          </p>
+<div class="flex items-center gap-space-sm mt-space-xs">
+<button class="bg-primary text-on-primary px-3 py-1 rounded font-headline-sm text-headline-sm hover:opacity-90 transition-opacity">
+              Trigger Targeted Subset
+            </button>
+<button class="bg-surface-container-high text-on-surface-variant hover:text-on-surface px-3 py-1 rounded font-headline-sm text-headline-sm transition-colors">
+              Bypass Safety Hold
+            </button>
+</div>
+</div>
+</div>
+<!-- Historical Precedent Match (K-Nearest Neighbors) -->
+<div class="bg-surface-container p-space-md rounded-xl flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">scatter_plot</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">K-Nearest Neighbor Pipeline Matches</span>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container-lowest px-2 py-0.5 rounded text-outline font-mono">k=4 Euclidean</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Historical CI runs exhibiting the closest high-dimensional feature vectors to commit <span class="text-primary font-mono">7a8f19cd</span>:
+        </p>
+<!-- KNN Runs Table -->
+<div class="flex flex-col gap-1.5 mt-1">
+<!-- Item 1 -->
+<div class="bg-surface-container-low p-space-sm rounded-lg flex items-center justify-between hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="w-2 h-2 rounded-full bg-error shrink-0"></span>
+<div class="flex flex-col truncate">
+<span class="font-label-md text-label-md text-on-surface font-medium truncate">Run #3812 • PR #98 (api-gateway)</span>
+<span class="font-label-sm text-label-sm text-outline truncate">Lockfile modified • 410 lines churn • FAILED (Dependency Error)</span>
+</div>
+</div>
+<div class="flex flex-col items-end shrink-0 pl-2">
+<span class="font-label-sm text-label-sm text-primary font-bold">94% MATCH</span>
+<span class="font-label-sm text-label-sm text-error font-mono">Exit Code 1</span>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="bg-surface-container-low p-space-sm rounded-lg flex items-center justify-between hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="w-2 h-2 rounded-full bg-error shrink-0"></span>
+<div class="flex flex-col truncate">
+<span class="font-label-md text-label-md text-on-surface font-medium truncate">Run #3420 • PR #65 (api-gateway)</span>
+<span class="font-label-sm text-label-sm text-outline truncate">Lockfile modified • 520 lines churn • FAILED (Test Timeout)</span>
+</div>
+</div>
+<div class="flex flex-col items-end shrink-0 pl-2">
+<span class="font-label-sm text-label-sm text-primary font-bold">89% MATCH</span>
+<span class="font-label-sm text-label-sm text-error font-mono">Timeout 30m</span>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="bg-surface-container-low p-space-sm rounded-lg flex items-center justify-between hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="w-2 h-2 rounded-full bg-primary-container shrink-0"></span>
+<div class="flex flex-col truncate">
+<span class="font-label-md text-label-md text-on-surface font-medium truncate">Run #2904 • PR #22 (api-gateway)</span>
+<span class="font-label-sm text-label-sm text-outline truncate">Lockfile modified • Clean rebase on main • SUCCESS</span>
+</div>
+</div>
+<div class="flex flex-col items-end shrink-0 pl-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold">81% MATCH</span>
+<span class="font-label-sm text-label-sm text-primary font-mono">Passed 14m</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-2 rounded text-center">
+<span class="font-label-sm text-label-sm text-outline">
+            Cosine Similarity Vector: [0.892, 0.741, 0.965, 0.412] • Distance Metric: 0.14
+          </span>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: SHAP Value Decomposition & Configurable Intervention Controls -->
+<div class="lg:col-span-7 flex flex-col gap-space-md">
+<!-- Feature Impact Breakdown (SHAP Values) -->
+<div class="bg-surface-container p-space-lg rounded-xl shadow-lg flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary text-[22px]">analytics</span>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface font-semibold">Explainability &amp; Feature SHAP Attribution</h2>
+<p class="font-body-sm text-body-sm text-outline">Additive feature attribution values calibrated against 14,200 baseline runs</p>
+</div>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container-low px-2 py-1 rounded">
+<span class="font-label-sm text-label-sm text-error font-medium">+88.2% Total Risk</span>
+<span class="font-label-sm text-label-sm text-outline">/</span>
+<span class="font-label-sm text-label-sm text-secondary-fixed font-medium">-4.2% Mitigating</span>
+</div>
+</div>
+<!-- Waterfall / Horizontal Bar Visualizations -->
+<div class="flex flex-col gap-space-sm pt-space-xs">
+<!-- Feature 1: Lockfiles -->
+<div class="bg-surface-container-low p-space-sm rounded-lg flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="material-symbols-outlined text-error text-[18px]">inventory_2</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-medium truncate">Dependency files modified</span>
+<span class="font-label-sm text-label-sm text-outline font-mono truncate hidden sm:inline">(+package-lock.json, +cargo.lock)</span>
+</div>
+<span class="font-label-md text-label-md text-error font-bold font-mono shrink-0">+32.4% Risk</span>
+</div>
+<!-- Bar -->
+<div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden flex">
+<div class="bg-error h-full rounded-full transition-all duration-700" style="width: 75%"></div>
+</div>
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>High volatility index in cargo.lock dependency resolution graph</span>
+<span class="text-outline font-mono">Weight: 0.324</span>
+</div>
+</div>
+<!-- Feature 2: Churn -->
+<div class="bg-surface-container-low p-space-sm rounded-lg flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="material-symbols-outlined text-error text-[18px]">difference</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-medium truncate">Extreme Code Churn Dynamics</span>
+<span class="font-label-sm text-label-sm text-outline font-mono truncate hidden sm:inline">(+482 / -310 in 14 modules)</span>
+</div>
+<span class="font-label-md text-label-md text-error font-bold font-mono shrink-0">+21.8% Risk</span>
+</div>
+<!-- Bar -->
+<div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden flex">
+<div class="bg-error h-full rounded-full transition-all duration-700" style="width: 55%"></div>
+</div>
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>Exceeds repository 90th percentile churn per pull request</span>
+<span class="text-outline font-mono">Weight: 0.218</span>
+</div>
+</div>
+<!-- Feature 3: Author Domain Rate -->
+<div class="bg-surface-container-low p-space-sm rounded-lg flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="material-symbols-outlined text-tertiary-container text-[18px]">person_alert</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-medium truncate">Component Context Failure Probability</span>
+<span class="font-label-sm text-label-sm text-outline font-mono truncate hidden sm:inline">(auth-core failure rate: 38%)</span>
+</div>
+<span class="font-label-md text-label-md text-tertiary-container font-bold font-mono shrink-0">+14.2% Risk</span>
+</div>
+<!-- Bar -->
+<div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden flex">
+<div class="bg-tertiary-container h-full rounded-full transition-all duration-700" style="width: 38%"></div>
+</div>
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>Historical CI failures on auth subsystem across previous 5 sprints</span>
+<span class="text-outline font-mono">Weight: 0.142</span>
+</div>
+</div>
+<!-- Feature 4: Flaky Test Presence -->
+<div class="bg-surface-container-low p-space-sm rounded-lg flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="material-symbols-outlined text-secondary text-[18px]">bug_report</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-medium truncate">Flaky Test in Target Execution Suite</span>
+<span class="font-label-sm text-label-sm text-outline font-mono truncate hidden sm:inline">(test_token_exchange failed 3/10)</span>
+</div>
+<span class="font-label-md text-label-md text-secondary text-bold font-mono shrink-0">+11.5% Risk</span>
+</div>
+<!-- Bar -->
+<div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden flex">
+<div class="bg-secondary-container h-full rounded-full transition-all duration-700" style="width: 30%"></div>
+</div>
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>Unstable assertion detected in auth-token suite test harness</span>
+<span class="text-outline font-mono">Weight: 0.115</span>
+</div>
+</div>
+<!-- Feature 5: Branch Lag -->
+<div class="bg-surface-container-low p-space-sm rounded-lg flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="material-symbols-outlined text-outline text-[18px]">call_split</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-medium truncate">Branch Divergence / Main Skew</span>
+<span class="font-label-sm text-label-sm text-outline font-mono truncate hidden sm:inline">(Branch is 14 commits behind main)</span>
+</div>
+<span class="font-label-md text-label-md text-outline font-bold font-mono shrink-0">+8.3% Risk</span>
+</div>
+<!-- Bar -->
+<div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden flex">
+<div class="bg-surface-bright h-full rounded-full transition-all duration-700" style="width: 22%"></div>
+</div>
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>High likelihood of post-merge integration collision</span>
+<span class="text-outline font-mono">Weight: 0.083</span>
+</div>
+</div>
+<!-- Mitigating Counteracting Feature -->
+<div class="bg-surface-container-low p-space-sm rounded-lg flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="material-symbols-outlined text-primary-container text-[18px]">verified</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-medium truncate">Declared High Unit Test Coverage</span>
+<span class="font-label-sm text-label-sm text-outline font-mono truncate hidden sm:inline">(88.2% test statements verified)</span>
+</div>
+<span class="font-label-md text-label-md text-primary font-bold font-mono shrink-0">-4.2% Risk (Mitigating)</span>
+</div>
+<!-- Bar -->
+<div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden flex justify-end">
+<div class="bg-primary-container h-full rounded-full transition-all duration-700" style="width: 15%"></div>
+</div>
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>Author included 18 targeted unit test fixtures within PR diff</span>
+<span class="text-primary font-mono">Weight: -0.042</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Configurable Thresholds & Automated Interventions -->
+<div class="bg-surface-container p-space-lg rounded-xl flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">tune</span>
+<h2 class="font-headline-md text-headline-md text-on-surface font-semibold">Configurable Policies &amp; Autonomous Actions</h2>
+</div>
+<span class="font-label-sm text-label-sm text-outline font-mono">Policy Set: strict-sre-v4</span>
+</div>
+<!-- Multi-tier threshold indicator slider visual -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex justify-between items-center text-outline font-label-sm text-label-sm">
+<span>Risk Partition Boundaries</span>
+<span>Current Score: <strong class="text-error font-mono">84% (Critical)</strong></span>
+</div>
+<div class="grid grid-cols-4 gap-1 h-3 rounded-full overflow-hidden bg-surface-container-lowest p-0.5">
+<div class="bg-surface-bright rounded-l-full relative flex items-center justify-center">
+<span class="font-label-sm text-[9px] text-on-surface-variant hidden md:inline">LOW &lt;30%</span>
+</div>
+<div class="bg-secondary-container/60 relative flex items-center justify-center">
+<span class="font-label-sm text-[9px] text-on-surface hidden md:inline">MOD 30-60%</span>
+</div>
+<div class="bg-tertiary-container/60 relative flex items-center justify-center">
+<span class="font-label-sm text-[9px] text-on-surface hidden md:inline">HIGH 60-80%</span>
+</div>
+<div class="bg-error-container relative flex items-center justify-center shadow-[inset_0_0_8px_rgba(255,180,171,0.4)]">
+<span class="font-label-sm text-[9px] text-error font-bold">CRITICAL &gt;80%</span>
+</div>
+</div>
+</div>
+<!-- Interactive Automated Toggles -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-sm pt-space-xs">
+<!-- Toggle 1 -->
+<label class="bg-surface-container-low p-space-sm rounded-lg flex flex-col justify-between gap-space-sm cursor-pointer hover:bg-surface-container-high transition-colors">
+<div class="flex items-start justify-between">
+<span class="material-symbols-outlined text-secondary text-[20px]">notifications_active</span>
+<input checked="" class="w-4 h-4 rounded bg-surface-container-lowest accent-primary cursor-pointer" type="checkbox"/>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface font-medium">Author Slack Alert</span>
+<span class="font-label-sm text-label-sm text-outline">Trigger on risk score &gt;70%</span>
+</div>
+</label>
+<!-- Toggle 2 -->
+<label class="bg-surface-container-low p-space-sm rounded-lg flex flex-col justify-between gap-space-sm cursor-pointer hover:bg-surface-container-high transition-colors">
+<div class="flex items-start justify-between">
+<span class="material-symbols-outlined text-error text-[20px]">gavel</span>
+<input checked="" class="w-4 h-4 rounded bg-surface-container-lowest accent-primary cursor-pointer" type="checkbox"/>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface font-medium">Require 2nd Review</span>
+<span class="font-label-sm text-label-sm text-outline">Enforced on Critical Tier</span>
+</div>
+</label>
+<!-- Toggle 3 -->
+<label class="bg-surface-container-low p-space-sm rounded-lg flex flex-col justify-between gap-space-sm cursor-pointer hover:bg-surface-container-high transition-colors">
+<div class="flex items-start justify-between">
+<span class="material-symbols-outlined text-tertiary text-[20px]">developer_board</span>
+<input checked="" class="w-4 h-4 rounded bg-surface-container-lowest accent-primary cursor-pointer" type="checkbox"/>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface font-medium">Diagnostic Verbosity</span>
+<span class="font-label-sm text-label-sm text-outline">Inject DEBUG log agents</span>
+</div>
+</label>
+</div>
+<!-- Custom Parameter Adjustment Sub-panel (Collapsible/Interactive) -->
+<div class="bg-surface-container-lowest p-space-sm rounded-lg flex flex-col sm:flex-row items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-outline text-[18px]">science</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Simulate Synthetic What-If: Exclude cargo.lock modifications</span>
+</div>
+<button class="bg-surface-container-high hover:bg-surface-bright text-primary font-label-sm text-label-sm px-space-sm py-1 rounded transition-colors whitespace-nowrap" id="simulateToggleBtn">
+            Recalculate (Simulate -32.4%)
+          </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Visual Asset Panel: CI Worker Topology & Historical Matrix Telemetry -->
+<div class="mt-space-lg grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Visual 1: Pre-Execution Model Telemetry -->
+<div class="bg-surface-container p-space-md rounded-xl flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[18px]">insights</span>
+          Model Precision Calibration
+        </span>
+<span class="font-label-sm text-label-sm text-primary font-mono">AUC: 0.941</span>
+</div>
+<!-- Mini Sparkline / Trend SVG -->
+<div class="w-full h-24 bg-surface-container-lowest rounded-lg p-2 flex items-end">
+<svg class="w-full h-full" preserveaspectratio="none" viewbox="0 0 240 80">
+<path class="text-primary" d="M0,70 Q30,65 60,40 T120,45 T180,20 T240,15" fill="none" stroke="currentColor" stroke-width="2.5"></path>
+<path class="text-primary/10" d="M0,70 Q30,65 60,40 T120,45 T180,20 T240,15 L240,80 L0,80 Z" fill="currentColor"></path>
+<!-- Baseline line -->
+<line class="text-outline-variant" stroke="currentColor" stroke-dasharray="4 4" stroke-width="1" x1="0" x2="240" y1="50" y2="50"></line>
+</svg>
+</div>
+<div class="flex justify-between items-center mt-space-xs font-label-sm text-label-sm text-outline">
+<span>F1-Score: 0.884</span>
+<span>False Positive Rate: 3.2%</span>
+</div>
+</div>
+<!-- Visual 2: Fleet Cluster Resource Impact -->
+<div class="bg-surface-container p-space-md rounded-xl flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[18px]">memory</span>
+          Predicted Compute Savings
+        </span>
+<span class="font-label-sm text-label-sm text-secondary font-mono">-$142.50 / run</span>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded-lg flex flex-col gap-1.5">
+<div class="flex justify-between text-on-surface font-label-sm text-label-sm">
+<span>Runner CPU Hours Saved</span>
+<span class="text-primary font-bold">18.4 vCPU-hrs</span>
+</div>
+<div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden">
+<div class="bg-secondary-container h-full rounded-full" style="width: 72%"></div>
+</div>
+<div class="flex justify-between text-on-surface font-label-sm text-label-sm">
+<span>Failed Test Matrix Jobs Aborted</span>
+<span class="text-error font-bold">12 / 16 jobs</span>
+</div>
+<div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden">
+<div class="bg-error h-full rounded-full" style="width: 75%"></div>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-outline mt-space-xs">Computed via AWS EC2 c6i.2xlarge spot rates</span>
+</div>
+<!-- Visual 3: Automated Diagnostic Snapshot Placeholder -->
+<div class="bg-surface-container p-space-md rounded-xl flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-tertiary text-[18px]">device_hub</span>
+          Dependency Conflict Vector
+        </span>
+<span class="font-label-sm text-label-sm bg-surface-container-highest px-2 py-0.5 rounded text-outline font-mono">AST-Tree</span>
+</div>
+<div class="h-24 w-full bg-surface-container-lowest rounded-lg flex items-center justify-center relative overflow-hidden">
+<img class="object-cover w-full h-full opacity-60 rounded-lg hover:scale-105 transition-transform duration-500" data-alt="Abstract dark UI visualization of a complex dependency graph network with glowing neon purple and coral node connections on a deep obsidian technical interface background, isometric developer dashboard design" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5B44y1CYotOa4UYRuUslh9waKvCAfssrV4p9J50dpLhHHAiGqZpwhYkuYPcFPcBO6YQvHfTS2-uD3NIJqP-PgfsGqbQAp318WKzVLb0Gk0Tyj2c9lIHdyu6nC1WEnl1PjUetnDfI370tNiO_shmxGGXsN0SbLxrJ9tVLo6gpjEU2JHlEuUX_KMRCUztwZjUSvsdN_bK4ClvN2slwuV5ndmyLq5HiGFF0x9L2YrwlTJ6QJwp3aLJZ3"/>
+<div class="absolute inset-0 bg-surface-container-lowest/40 backdrop-blur-[1px] flex items-center justify-center">
+<span class="font-label-sm text-label-sm text-on-surface bg-surface-container-highest/90 px-space-sm py-1 rounded border border-outline-variant/30 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-tertiary">hub</span>
+            cargo.lock • openssl-sys conflict
+          </span>
+</div>
+</div>
+<div class="flex justify-between items-center mt-space-xs font-label-sm text-label-sm text-outline">
+<span>Transitive Dependencies: 42</span>
+<span class="text-tertiary">3 Circular Links</span>
+</div>
+</div>
+</div>
+<!-- Micro-interactions logic -->
+<script>
+    (function initPredictionInspector() {
+      const simulateBtn = document.getElementById('simulateToggleBtn');
+      const riskScoreVal = document.getElementById('riskScoreVal');
+      const riskMeterCircle = document.getElementById('riskMeterCircle');
+      const reInferenceBtn = document.getElementById('reInferenceBtn');
+
+      let simulated = false;
+
+      if (simulateBtn && riskScoreVal && riskMeterCircle) {
+        simulateBtn.addEventListener('click', function() {
+          simulated = !simulated;
+          if (simulated) {
+            riskScoreVal.textContent = '52%';
+            riskScoreVal.classList.remove('text-error');
+            riskScoreVal.classList.add('text-secondary');
+            riskMeterCircle.classList.remove('text-error');
+            riskMeterCircle.classList.add('text-secondary');
+            // 52% of 427 circumference = 222 offset remaining
+            riskMeterCircle.setAttribute('stroke-dashoffset', '205');
+            simulateBtn.textContent = 'Reset Simulation (+32.4%)';
+          } else {
+            riskScoreVal.textContent = '84%';
+            riskScoreVal.classList.remove('text-secondary');
+            riskScoreVal.classList.add('text-error');
+            riskMeterCircle.classList.remove('text-secondary');
+            riskMeterCircle.classList.add('text-error');
+            riskMeterCircle.setAttribute('stroke-dashoffset', '68');
+            simulateBtn.textContent = 'Recalculate (Simulate -32.4%)';
+          }
+        });
+      }
+
+      if (reInferenceBtn) {
+        reInferenceBtn.addEventListener('click', function() {
+          const originalText = reInferenceBtn.innerHTML;
+          reInferenceBtn.innerHTML = '<span class="material-symbols-outlined animate-spin text-[18px]">progress_activity</span> Computing SHAP...';
+          reInferenceBtn.disabled = true;
+
+          setTimeout(() => {
+            reInferenceBtn.innerHTML = originalText;
+            reInferenceBtn.disabled = false;
+          }, 900);
+        });
+      }
+    })();
+  </script>
+</div></main></div></body></html>
